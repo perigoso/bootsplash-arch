@@ -6,7 +6,7 @@
 # This needs ImageMagick for the 'convert' and 'identify' tools.
 #
 
-LOGO=archlogo.png
+LOGO=danctnix.png
 LOGO_WIDTH=$(identify $LOGO | cut -d " " -f 3 | cut -d x -f 1)
 LOGO_HEIGHT=$(identify $LOGO | cut -d " " -f 3 | cut -d x -f 2)
 
@@ -30,7 +30,7 @@ convert -alpha remove \
 	--bg_red 0x00 \
 	--bg_green 0x00 \
 	--bg_blue 0x00 \
-	--frame_ms 50 \
+	--frame_ms 48 \
 	--picture \
 	--pic_width $LOGO_WIDTH \
 	--pic_height $LOGO_HEIGHT \
@@ -67,6 +67,12 @@ convert -alpha remove \
 	--blob throbber21.rgb \
 	--blob throbber22.rgb \
 	--blob throbber23.rgb \
-	bootsplash-arch
+	--blob throbber24.rgb \
+	--blob throbber25.rgb \
+	--blob throbber26.rgb \
+	--blob throbber27.rgb \
+	--blob throbber28.rgb \
+	--blob throbber29.rgb \
+	bootsplash-danctnix
 
 rm *.rgb
